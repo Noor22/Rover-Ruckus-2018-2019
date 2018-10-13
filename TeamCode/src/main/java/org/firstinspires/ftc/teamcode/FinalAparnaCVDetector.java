@@ -31,7 +31,9 @@ public class FinalAparnaCVDetector extends LinearOpMode {
         }
 //        detectorAlign.disable();
         detector.disable();
+
     }
+
 
 //
 //    public void initAlign() {
