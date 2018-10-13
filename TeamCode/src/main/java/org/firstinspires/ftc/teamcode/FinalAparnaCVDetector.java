@@ -34,7 +34,6 @@ public class FinalAparnaCVDetector extends LinearOpMode {
 
     }
 
-
 //
 //    public void initAlign() {
 //        telemetry.addData("Status", "DogeCV 2018.0 - Sampling Order Example");
