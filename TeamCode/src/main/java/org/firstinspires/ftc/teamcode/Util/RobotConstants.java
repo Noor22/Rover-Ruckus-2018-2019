@@ -8,7 +8,7 @@ public class RobotConstants
     private final int DRIVE_TOLERANCE = 50;
     private final double TURN_TOLERANCE = 1;
     //TODO: TEST FOR VALS
-    public final int ENCODER_TICKS_PER_REVOLUTION = 0;
+    public final int ENCODER_TICKS_PER_REVOLUTION = 697;
 
     public int getTICKS_PER_INCH() {
         return (int)(ENCODER_TICKS_PER_REVOLUTION / WHEEL_CIRCUMFERENCE);

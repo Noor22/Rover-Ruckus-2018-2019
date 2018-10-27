@@ -77,10 +77,10 @@ public class DriveTrain implements SubsystemTemplate
 
         setDrive(Drive.SPEED);
 
-        l1.setDirection(DcMotorSimple.Direction.REVERSE);
-        l2.setDirection(DcMotorSimple.Direction.REVERSE);
-        r1.setDirection(DcMotorSimple.Direction.FORWARD);
-        r2.setDirection(DcMotorSimple.Direction.FORWARD);
+        l1.setDirection(DcMotorSimple.Direction.FORWARD);
+        l2.setDirection(DcMotorSimple.Direction.FORWARD);
+        r1.setDirection(DcMotorSimple.Direction.REVERSE);
+        r2.setDirection(DcMotorSimple.Direction.REVERSE);
 
         setSpeedController(DriveSpeedController.BRAKE);
 
@@ -104,10 +104,10 @@ public class DriveTrain implements SubsystemTemplate
 
         setDrive(Drive.SPEED);
 
-        l1.setDirection(DcMotorSimple.Direction.FORWARD);
-        l2.setDirection(DcMotorSimple.Direction.FORWARD);
-        r1.setDirection(DcMotorSimple.Direction.REVERSE);
-        r2.setDirection(DcMotorSimple.Direction.REVERSE);
+        l1.setDirection(DcMotorSimple.Direction.REVERSE);
+        l2.setDirection(DcMotorSimple.Direction.REVERSE);
+        r1.setDirection(DcMotorSimple.Direction.FORWARD);
+        r2.setDirection(DcMotorSimple.Direction.FORWARD);
 
         setSpeedController(DriveSpeedController.BRAKE);
 
@@ -245,9 +245,9 @@ public class DriveTrain implements SubsystemTemplate
 
         driveCL.setTarget(leftTarget);
 
-        double pwr = driveCL.pLoop(getLeftCurrentPosition());
-        setLeftPower(pwr);
-        setRightPower(pwr);
+//        double pwr = driveCL.pLoop(getLeftCurrentPosition());
+        setLeftPower(0.5);
+        setRightPower(0.5);
 
         if((Math.abs((getLeftCurrentPosition()-leftTarget))<constant.getDRIVE_TOLERANCE()))
         {

@@ -4,6 +4,9 @@ import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
 
+import org.firstinspires.ftc.teamcode.Subsystems.Robot;
+import org.firstinspires.ftc.teamcode.Util.Gyro;
+
 /**
  * Created by Sumanth on 10/2/18.
  */
@@ -15,11 +18,14 @@ public class TeleOp extends OpMode {
     @Override
     public void init() {
 
-        l1.setDirection(DcMotorSimple.Direction.FORWARD);
-        l2.setDirection(DcMotorSimple.Direction.FORWARD);
-        r1.setDirection(DcMotorSimple.Direction.FORWARD);
-        r2.setDirection(DcMotorSimple.Direction.FORWARD);
+        Robot robot = new Robot();
+        Gyro gyro = new Gyro();
+        gyro.initGyro(hardwareMap);
+        robot.init(hardwareMap, gyro);
     }
+
+    Robot robot = new Robot();
+    Gyro gyro = new Gyro();
 
     @Override
     public void loop() {
@@ -34,22 +40,15 @@ public class TeleOp extends OpMode {
             rightVal *= -0.3;
         }
 
-        l1.setPower(leftVal);
-        l2.setPower(leftVal);
-        r1.setPower(rightVal);
-        r2.setPower(rightVal);
-
-
-
+        robot.driveTrain.setLeftPower(leftVal);
+        robot.driveTrain.setRightPower(rightVal);
 
     }
 
     @Override
     public void stop() {
 
-        l1.setPower(0);
-        l2.setPower(0);
-        r1.setPower(0);
-        r2.setPower(0);
+        robot.driveTrain.setLeftPower(0);
+        robot.driveTrain.setRightPower(0);
     }
 }

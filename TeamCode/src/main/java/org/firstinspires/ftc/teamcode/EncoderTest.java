@@ -1,14 +1,40 @@
 package org.firstinspires.ftc.teamcode;
 
-import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
+import com.qualcomm.robotcore.eventloop.opmode.*;
+import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
+
+import org.firstinspires.ftc.teamcode.Subsystems.Robot;
+import org.firstinspires.ftc.teamcode.Util.Gyro;
 
 /**
  * Created by Sumanth on 10/2/18.
  */
-
+@TeleOp(name = "enc", group = "")
 public class EncoderTest extends LinearOpMode {
     @Override
     public void runOpMode() throws InterruptedException {
+
+        Robot robot = new Robot();
+        Gyro gyro = new Gyro();
+        gyro.initGyro(hardwareMap);
+        robot.init(hardwareMap, gyro);
+
+        int i = 0;
+
+        waitForStart();
+        while(opModeIsActive()){
+
+            if(i == 0){
+
+                robot.driveTrain.setMoveDist(25);
+                i++;
+
+            }
+
+            telemetry.addData("dt", robot.driveTrain.display());
+            telemetry.update();
+
+        }
 
     }
 

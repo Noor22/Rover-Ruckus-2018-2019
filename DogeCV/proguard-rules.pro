@@ -1,25 +1,31 @@
-# Add project specific ProGuard rules here.
-# By default, the flags in this file are appended to flags specified
-# in /home/guinea/Android/Sdk/tools/proguard/proguard-android.txt
-# You can edit the include path and order by changing the proguardFiles
-# directive in build.gradle.
-#
-# For more details, see
-#   http://developer.android.com/guide/developing/tools/proguard.html
+# Avoid touching the FTC SDK
+-keep class com.qualcomm.** {*;}
+-keep class org.firstinspires.** {*;}
+-keep class com.google.blocks.** {*;}
+-keep class com.vuforia.** {*;}
+-keep class javax.** {*;}
 
-# Add any project specific keep options here:
+-dontwarn com.qualcomm.**
+-dontwarn org.firstinspires.**
+-dontwarn com.vuforia.**
+-dontwarn com.sun.**
 
-# If your project uses WebView with JS, uncomment the following
-# and specify the fully qualified class name to the JavaScript interface
-# class:
-#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
-#   public *;
-#}
+# Op modes
+-keep public class * extends com.qualcomm.robotcore.eventloop.opmode.OpMode
 
-# Uncomment this to preserve the line number information for
-# debugging stack traces.
-#-keepattributes SourceFile,LineNumberTable
+# Kotlin
+-dontwarn kotlin.**
 
-# If you keep the line number information, uncomment this to
-# hide the original source file name.
-#-renamesourcefileattribute SourceFile
+# ACME libs
+# this keep is actually required for serialization
+-keep class com.acmerobotics.** {*;}
+-dontwarn com.acmerobotics.**
+
+# Other deps
+-dontwarn com.fasterxml.**
+-dontwarn org.yaml.**
+-dontwarn org.apache.**
+-dontwarn com.google.gson.**
+
+# Misc
+-dontnote **

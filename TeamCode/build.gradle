@@ -10,7 +10,14 @@
 // Custom definitions may go here
 // Include common definitions from above.
 apply from: '../build.common.gradle'
+
+repositories {
+    jcenter()
+    google()
+}
+
 dependencies {
     implementation project(':openCVLibrary3')
     implementation project(':DogeCV')
+    implementation 'com.android.support:multidex:1.0.3'
 }
