@@ -39,7 +39,7 @@ public class FinalAparnaCVDetector extends LinearOpMode {
 //        telemetry.addData("Status", "DogeCV 2018.0 - Sampling Order Example");
 //
 //        detector = new SamplingOrderDetector();
-//        detector.init(hardwareMap.appContext, CameraViewDisplay.getInstance());
+//        detector.initTeleOp(hardwareMap.appContext, CameraViewDisplay.getInstance());
 //        detector.useDefaults();
 //
 //        detector.downscale = 0.4; // How much to downscale the input frames
