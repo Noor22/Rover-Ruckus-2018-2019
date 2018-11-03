@@ -10,7 +10,7 @@ import com.qualcomm.robotcore.hardware.HardwareMap;
  * Created by Sumanth on 11/2/18.
  */
 
-public class MineralDetectionUtil {
+public class MineralDetectionUtil{
 
     private SamplingOrderDetector detector;
     private LinearOpMode linearOpMode;

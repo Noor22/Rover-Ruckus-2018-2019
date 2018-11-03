@@ -1,4 +1,4 @@
-package org.firstinspires.ftc.teamcode.AparnaCVStuff;
+package org.firstinspires.ftc.teamcode.CVStuff;
 
 import com.disnodeteam.dogecv.DogeCV;
 import com.disnodeteam.dogecv.detectors.DogeCVDetector;

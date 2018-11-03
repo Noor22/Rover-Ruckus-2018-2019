@@ -24,7 +24,7 @@ public class MineralUtilTest extends LinearOpMode {
 
 
         waitForStart();
-        while(opModeIsActive()){
+        while( opModeIsActive()){
 
             telemetry.addData("pos", detectionUtil.getMineralPos());
 

@@ -1,15 +1,11 @@
-package org.firstinspires.ftc.teamcode.AparnaCVStuff;
+package org.firstinspires.ftc.teamcode.CVStuff;
 
 import com.disnodeteam.dogecv.CameraViewDisplay;
 import com.disnodeteam.dogecv.DogeCV;
 import com.disnodeteam.dogecv.detectors.roverrukus.GoldAlignDetector;
 import com.disnodeteam.dogecv.detectors.roverrukus.SamplingOrderDetector;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
-import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
-
-import org.firstinspires.ftc.teamcode.AparnaCVStuff.GoldAlignExample;
-import org.firstinspires.ftc.teamcode.AparnaCVStuff.SamplingOrderExample;
 
 @TeleOp(name = "Final RohParnaCv")
 public class FinalAparnaCVDetector extends LinearOpMode {
